@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <!-- Bootstrap initialization link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Creating style for the whole survey form such as background color, width, margin and padding */
+        #form{
+            background-color: white;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            border: 2px solid gray;
+        }
+
+        /* Changing the color of th star checked */
+        .checked{
+            color: orange;
+        }
+
+
+        .span-manipulation{
+            margin-left: 5px;
+        }
+
+        /* Style for the button */
+        #submit{
+            padding-top:15px;
+            padding-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgrey;
+        }
+
+        /* Style for button when hovered */
+        #submit:hover{
+            background-color: rgb(232, 232, 232);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Creating the survey form layout -->
+    <form id="form">
+        <!-- Creating Layout and input for first name and last name -->
+        <div>
+            <div class="row">
+                <div class="col-xs-6 col-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="label-name" id="label-name" style="font-weight: bold;"> Name
+                        <sup style="color: red; font-weight: bold;">*</sup>
+                    </label>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" id="Fname" class="form-control">
+                            <span class="span-manipulation"> First</span>
+                          </div>
+                          <div class="col">
+                            <input type="text" id="lname" class="form-control"
+                            <span class="span-manipulation"> Last</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <br>
+
+        <!-- Creating layout and input for email -->
+        <div>
+            <div class="row">
+                <div class="col-xs-6 col-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="label-email" id="label-email" style="font-weight: bold;">Email
+                        <sup style="color: red; font-weight: bold;">*</sup>
+                    </label>
+                    <div class="row">
+                        <div class="col">
+                            <input type="email" id="email" class="form-control" placeholder="Email">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- Creating Layout and input for experince rating -->
+        <div>
+            <div class="row">
+                <label for="label-experience" id="label-experience" style="font-weight: bold;"> Your Experience
+                    <sup style="color: red; font-weight: bold;">*</sup>
+                </label>
+                <!-- Creating row and column for star rating -->
+                <div class="row">
+                    <div class="col">
+                        <div class="rating-star">
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <p style="font-size: 12px;">Overall, how would you rate your experience with us?</p>       
+                        </div> 
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <!-- Creating layout and input for Satisfaction rating using tables -->
+        <label for="satisfacton" id="label-satisfaction" style="font-weight: bold;">How satisfied are you with
+            <sup style="font-size: small; color: red;">*</sup>
+        </label>
+        <!-- Creating table for rating response -->
+        <div class=table-responsive" id="table-satisfaction">
+            <table class="table table-stripped table-hover table-borderles table-responsive">
+                <!-- table headers to show how satisfied the customers feel -->
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col" style="font-weight: lighter; text-align: center;">Very Unsatisfied</th>
+                        <th scope="col" style="font-weight: lighter; text-align: center;">Unsatisfied</th></th>
+                        <th scope="col" style="font-weight: lighter; text-align: center;">Neutral</th>
+                        <th scope="col" style="font-weight: lighter; text-align: center;">Satisfied</th>
+                        <th scope="col" style="font-weight: lighter; text-align: center;">Very Satisfied</th>
+                    </tr>
+                </thead>
+
+                <!-- table body filled with category on which they are rating and radio type rating was used -->
+                <tbody>
+                    <tr>
+                        <th scope="row" style="font-weight: lighter; background-color: rgb(234, 234, 234);">Purchase</th>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text1" value="value1"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text2" value="value2"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text3" value="value3"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text4" value="value4"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text5" value="value5"></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" style="font-weight: lighter;">Service</th>
+                        <td style="text-align: center;"><input type="radio" name="text6" value="value6"></td>
+                        <td style="text-align: center;"><input type="radio" name="text7" value="value7"></td>
+                        <td style="text-align: center;"><input type="radio" name="text8" value="value8"></td>
+                        <td style="text-align: center;"><input type="radio" name="text9" value="value9"></td>
+                        <td style="text-align: center;"><input type="radio" name="text10" value="value10"></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" style="font-weight: lighter; background-color: rgb(234, 234, 234);">Company Overall</th>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text11" value="value11"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text12" value="value12"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text13" value="value13"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text14" value="value14"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text15" value="value15"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+        <!-- Creating layout and input for Likely rating using tables -->
+        <label for="satisfacton" id="label-satisfaction" style="font-weight: bold;">How satisfied are you with
+            <sup style="font-size: small; color: red;">*</sup>
+        </label>
+        <!-- Creating table for rating response -->
+        <div class="table-responsive" id="table-satisfaction">
+            <table class="table table-stripped table-hover table-borderles table-responsive">
+
+                <!-- table headers to show how satisfied the customers feel -->
+                <thead>
+                    <tr >
+                        <th scope="col"></th>
+                        <th scope="col" style="font-weight: lighter; text-align: center;">Very Unlikely</th>
+                        <th scope="col" style="font-weight: lighter; text-align: center;">Unlikely</th></th>
+                        <th scope="col" style="font-weight: lighter; text-align: center;">Neutral</th>
+                        <th scope="col" style="font-weight: lighter; text-align: center;">Likely</th>
+                        <th scope="col" style="font-weight: lighter; text-align: center;">Very Likely</th>
+                    </tr>
+                </thead>
+
+                <!-- table body filled with category on which they are rating and radio type rating was used -->
+                <tbody>
+                    <tr>
+                        <th scope="row" style="font-weight: lighter; background-color: rgb(234, 234, 234);">Buy from us again</th>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text1" value="value1"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text2" value="value2"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text3" value="value3"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text4" value="value4"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text5" value="value5"></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" style="font-weight: lighter;">Reccomend our<br>product to others</th>
+                        <td style="text-align: center;"><input type="radio" name="text6" value="value6"></td>
+                        <td style="text-align: center;"><input type="radio" name="text7" value="value7"></td>
+                        <td style="text-align: center;"><input type="radio" name="text8" value="value8"></td>
+                        <td style="text-align: center;"><input type="radio" name="text9" value="value9"></td>
+                        <td style="text-align: center;"><input type="radio" name="text10" value="value10"></td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" style="font-weight: lighter; background-color: rgb(234, 234, 234);">Reccomend our<br>company to others</th>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text11" value="value11"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text12" value="value12"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text13" value="value13"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text14" value="value14"></td>
+                        <td style="text-align: center; background-color: rgb(234, 234, 234);"><input type="radio" name="text15" value="value15"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Creatinng layout for additional comments using textarea -->
+        <div class="mb-3">
+            <label for="remark">Additional comments or suggestion</label>
+            <textarea class="form-control" id="Textarea" rows="3"></textarea>
+        </div>
+
+        <!-- Creating a button to submit the survey form -->
+        <div>
+            <button id="submit" type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+<!-- adding the bootstrap javascript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</html>
